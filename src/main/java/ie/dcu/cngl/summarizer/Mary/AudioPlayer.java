@@ -41,12 +41,7 @@ public class AudioPlayer extends Thread {
     private boolean	exitRequested	= false;
     private float	gain			= 1.0f;
 
-    /**
-     * The status of the player
-     *
-     * @author GOXR3PLUS
-     *
-     */
+
     public enum Status {
         /**
          *
@@ -58,11 +53,7 @@ public class AudioPlayer extends Thread {
         PLAYING;
     }
 
-    /**
-     * AudioPlayer which can be used if audio stream is to be set separately,
-     * using setAudio().
-     *
-     */
+
     public AudioPlayer() {
     }
 

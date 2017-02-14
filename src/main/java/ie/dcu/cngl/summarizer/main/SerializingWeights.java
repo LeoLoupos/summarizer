@@ -19,7 +19,7 @@ public class SerializingWeights {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		String text = FileUtils.readFileToString(new File("C:\\Users\\Shane\\Desktop\\long.txt"), "UTF-8");
+		String text = FileUtils.readFileToString(new File("news.data"), "UTF-8");
 		Structurer structurer = new Structurer();
 		PageStructure structure = structurer.getStructure(text);	
 		

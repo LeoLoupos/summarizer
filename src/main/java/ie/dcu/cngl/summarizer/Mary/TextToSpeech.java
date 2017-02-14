@@ -13,10 +13,7 @@ import marytts.exceptions.MaryConfigurationException;
 import marytts.exceptions.SynthesisException;
 import marytts.modules.synthesis.Voice;
 
-/**
- * @author GOXR3PLUS
- *
- */
+
 public class TextToSpeech {
 
     private AudioPlayer		tts;
