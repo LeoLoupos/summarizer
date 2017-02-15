@@ -15,7 +15,7 @@ import org.apache.commons.io.FileUtils;
 
 public class Test {
 	public static void main(String [] args) throws Exception, FileNotFoundException, IOException {
-		//String text = FileUtils.readFileToString(new File("C:\\Users\\Shane\\Desktop\\long.txt"), "UTF-8");
+
         String LinesFromNewsFile="";
 
         try {
@@ -29,15 +29,14 @@ public class Test {
             System.out.println("Error:"+ex.toString());
         }
 
-        String[] stories=LinesFromNewsFile.split("&");
+        String[] stories = LinesFromNewsFile.split("&");
         int  x = 0;
         //ArrayList<Double[]> weights = new ArrayList<Double[]>();
 
-
-        // TextToSpeech tts = new TextToSpeech();
-      //  tts.setVoice("cmu-slt-hsmm");
+        TextToSpeech tts = new TextToSpeech();
+        tts.setVoice("cmu-slt-hsmm");
+        //OpennLP
         SentenceDetection_RE sen = new SentenceDetection_RE();
-
 
         for(int i=0;i<stories.length;i++) {
             String text = stories[i];
@@ -57,9 +56,9 @@ public class Test {
 
             summary = summarizer.summarize(text);
             int y=sen.wordCount(summary);
-            System.out.println(summary + "Words:" + y);
+            System.out.println(summary + "Summarized Words:" + y);
 
-         //   tts.speak((String)summary, 2.0f, false, true);
+            tts.speak((String)summary, 2.0f, false, true);
         }
 	}
 }

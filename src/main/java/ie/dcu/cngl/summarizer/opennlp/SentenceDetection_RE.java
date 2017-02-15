@@ -66,7 +66,7 @@ public class SentenceDetection_RE {
         for (String a :tokens){
             counter++;
         }
-        System.out.println(counter);
+        System.out.println("Words:" + counter);
         //Generating tags
         String[] tags = tagger.tag(tokens);
 
